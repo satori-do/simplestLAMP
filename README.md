@@ -1,0 +1,2 @@
+# simplestLAMP
+Auto deploy templates
