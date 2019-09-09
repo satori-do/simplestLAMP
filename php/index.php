@@ -22,6 +22,8 @@
           if (!$conn) {
              die("Connection failed: " . mysqli_connect_error());
           }
+          mysqli_query($conn,"SELECT * FROM Inventory");
+          mysqli_close($conn);
           echo "Connected successfully";
           ?>
           <?php
