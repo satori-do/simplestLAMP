@@ -9,7 +9,7 @@
 
     <body>
         <?php
-            echo "Hello, World!"
+            echo "Hello, World!<br><br>"
         ?>
         <?php
          $dbhost = "172.18.0.2";
@@ -17,14 +17,24 @@
          $dbpass = "devpass";
          $db = "test_db";
          // Create connection
-          $conn = mysqli_connect($dbhost, $dbuser, $dbpass,$db);
+          $link = mysqli_connect($dbhost, $dbuser, $dbpass,$db);
           // Check connection
-          if (!$conn) {
+          if (!$link) {
              die("Connection failed: " . mysqli_connect_error());
+             exit();
           }
-          mysqli_query($conn,"SELECT * FROM Inventory");
-          mysqli_close($conn);
-          echo "Connected successfully";
+          $query = "SELECT * FROM Inventory";
+          mysqli_query($link,$query);
+          if ($result = mysqli_query($link, $query)) {
+            /* extracting the associative array */
+            while ($row = mysqli_fetch_assoc($result)) {
+                printf ("%s) %s - [%s]<br>", $row["id"], $row["name"], $row["quantity"]);
+            }
+            /* delleting select */
+            mysqli_free_result($result);
+          }
+          mysqli_close($link);
+          echo "<br>Connected successfully";
           ?>
           <?php
               phpinfo();

@@ -1,6 +1,6 @@
 -- MySQL dump 10.16  Distrib 10.1.41-MariaDB, for debian-linux-gnu (x86_64)
 --
--- Host: 172.18.0.2    Database: 
+-- Host: 172.18.0.2    Database:
 -- ------------------------------------------------------
 -- Server version	10.1.41-MariaDB-1~bionic
 
@@ -949,4 +949,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-09-09 13:16:41
+-- Dump completed on 2019-09-10  8:52:04
