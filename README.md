@@ -1,12 +1,12 @@
 # Simplest LAMP:
-##Auto deploy templates:
+## Auto deploy templates:
 
 - Clone web repository
 - Clone devops repository
 - Preparing credentials
 - Running docker-compose up -d
 
-##Creating and dumping DB:
+## Creating and dumping DB:
 
 - Preparing mysql client:
 ```
