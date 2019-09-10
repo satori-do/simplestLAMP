@@ -3,12 +3,15 @@ version: '3'
 services:
   db:
     image: mariadb:10.1.41
+    # build: './mysql_build'
     container_name: mariadb_web
     environment:
       MYSQL_ROOT_PASSWORD: my_secret_pw_shh
       MYSQL_DATABASE: test_db
       MYSQL_USER: devuser
       MYSQL_PASSWORD: devpass
+    volumes:
+      - ./all_db_dump_file.sql:/docker-entrypoint-initdb.d/all_db_dump_file.sql
     ports:
       - "3306:3306"
   web:
