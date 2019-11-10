@@ -13,7 +13,7 @@ services:
     volumes:
       - ./all_db_dump_file.sql:/docker-entrypoint-initdb.d/all_db_dump_file.sql
     ports:
-      - "3306:3306"
+      - "127.0.0.1:3306:3306"
   web:
     # image: php:7.2-apache
     build: './php_build'
@@ -24,6 +24,6 @@ services:
     volumes:
       - ./php/:/var/www/html/
     ports:
-      - "8080:80"
+      - "80:80"
     stdin_open: true
     tty: true

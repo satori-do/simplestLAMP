@@ -12,7 +12,7 @@
             echo "Hello, World!<br><br>"
         ?>
         <?php
-         $dbhost = "172.18.0.2";
+         $dbhost = "mariadb_web";
          $dbuser = "devuser";
          $dbpass = "devpass";
          $db = "test_db";
